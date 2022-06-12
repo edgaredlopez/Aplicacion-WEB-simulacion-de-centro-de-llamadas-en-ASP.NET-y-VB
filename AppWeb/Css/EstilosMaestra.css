@@ -1,0 +1,87 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    width:100%;
+}
+
+.hola {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: Arial;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.menu {
+    background-color: #121f3d;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    color: #ffffff;
+}
+
+.ContenedorCampos {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 55px;
+}
+
+.Label {
+    display: inline-block;
+    margin-right: 20px
+}
+
+#Label1 {
+    margin-bottom: 20px;
+}
+
+.ContenedorBotones {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.Botones {
+    display: inline-block;
+    margin-right: 25px;
+    background-color: #0094ff;
+    height:50px;
+}
+
+.ContenedorTabla {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#gvProductos {
+    display: inline-block;
+}
+
+#Button2
+{
+    background-color:#ebc50d;
+    color:white;
+}
+#Button1 {
+    background-color: #3feb0d;
+    color: white;
+}
+.CajaPadre {
+    position: absolute;
+    display: grid;
+    text-align: center;
+    justify-items: center;
+    width: 100%;
+}
+.CajaHijo
+{
+    display:flex;
+    text-align:center;
+    justify-self:center;
+    width:100%;
+
+}

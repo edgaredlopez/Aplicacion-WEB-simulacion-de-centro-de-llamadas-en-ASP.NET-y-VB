@@ -16,8 +16,8 @@
         <div>
                 <div class="menu">
                 <asp:HyperLink ID="HyperLink1" runat="server" CssClass="hola" NavigateUrl="~/Modulos/Inicio.aspx">INICIO</asp:HyperLink>
-                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="hola" NavigateUrl="~/Modulos/ABCProductos.aspx">ABC de estudiantes</asp:HyperLink>
-                <asp:HyperLink ID="HyperLink3" runat="server" CssClass="hola">Sobre nosotros</asp:HyperLink>
+                <asp:HyperLink ID="ModuloAnalista" runat="server" CssClass="hola" NavigateUrl="~/Modulos/TICKETS.aspx">ABC TICKETS</asp:HyperLink>
+                <asp:HyperLink ID="ModuloInterlocutor" runat="server" CssClass="hola" NavigateUrl="~/Modulos/Reportes.aspx">Reporte de Tickets</asp:HyperLink>
             
             </div>
              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

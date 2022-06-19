@@ -11,113 +11,77 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Formulario
+Partial Public Class FormularioReporte
 
     '''<summary>
-    '''Control Label3.
+    '''Control CajaMesajeHeaderReporte.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents CajaMesajeHeaderReporte As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control Id.
+    '''Control EtiquetaBuscar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Id As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents EtiquetaBuscar As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control Nombre.
+    '''Control CajaFiltroReporte.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Nombre As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents CajaFiltroReporte As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control aniocursado.
+    '''Control Label1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents aniocursado As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control Grado.
+    '''Control fechainicial.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Grado As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents fechainicial As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control Seccion.
+    '''Control fechafinal.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Seccion As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents fechafinal As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control ClaseDesplegable.
+    '''Control BUSCARFILTRO.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents ClaseDesplegable As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents BUSCARFILTRO As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control Calificacion.
+    '''Control TablaReportes.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Calificacion As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control Button2.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control Button1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control CajaMesajeHeader.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents CajaMesajeHeader As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''Control TablaProductos.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents TablaProductos As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents TablaReportes As Global.System.Web.UI.WebControls.GridView
 End Class

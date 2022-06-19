@@ -139,19 +139,28 @@
   <ItemGroup>
     <Content Include="Css\EstilosMaestra.css" />
     <Content Include="Imagenes\instagram.png" />
-    <Content Include="Modulos\ABCProductos.aspx" />
+    <Content Include="Modulos\Reportes.aspx" />
+    <Content Include="Modulos\TICKETS.aspx" />
     <Content Include="Modulos\Inicio.aspx" />
     <Content Include="Modulos\Login.aspx" />
+    <Content Include="Modulos\EstilosLogin.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\ClsConexionMySQL.vb" />
     <Compile Include="App_Code\ClsInterfaz.vb" />
-    <Compile Include="Modulos\ABCProductos.aspx.designer.vb">
-      <DependentUpon>ABCProductos.aspx</DependentUpon>
+    <Compile Include="Modulos\Reportes.aspx.designer.vb">
+      <DependentUpon>Reportes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ABCProductos.aspx.vb">
-      <DependentUpon>ABCProductos.aspx</DependentUpon>
+    <Compile Include="Modulos\Reportes.aspx.vb">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\TICKETS.aspx.designer.vb">
+      <DependentUpon>TICKETS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\TICKETS.aspx.vb">
+      <DependentUpon>TICKETS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Modulos\Inicio.aspx.designer.vb">

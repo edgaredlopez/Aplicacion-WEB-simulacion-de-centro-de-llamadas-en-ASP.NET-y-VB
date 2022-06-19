@@ -5,82 +5,84 @@ Imports MySql.Data.MySqlClient
 Public Class WebForm1
 
     Inherits System.Web.UI.Page
-    Dim ObjClient As New ClsInterfaz() 'Importar clase de validaciones y mensajes
-    Dim ClaseDeConexionMYSQL As New ClsConexionMySQL() 'Importar clase de conexion y operaciones de bd
+    Dim ObjClient As New ClsInterfaz()
+    Dim ClsConexion As New ClsConexionMySQL()
     Dim StrSQL As New StringBuilder
+    Dim URLDireccionamientoCorrecto As String = "Inicio.aspx"  'pagina de inicio 
+    Dim RedirectLoginFailed As String = "Login.aspx" 'pagina de fallo al loguearse
 
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        If Not Page.IsPostBack Then 'la primera vez
+            Try
+                Session.Remove("cod_usuario")
+                Session.Remove("User_Name")
+                Session.Remove("pass_usuario")
+                Session.Remove("rol")
 
+                SetFocus(Me.CajaUsuario)
+                Session.Timeout = 360
+            Catch
 
-    Dim strConexion As String
-
-
-    Public Sub AsignarConexion(Optional ByVal strUsuario As String = "", Optional ByVal strContrasenia As String = "")
-        If (strUsuario.Trim.Length > 0 And strContrasenia.Trim.Length > 0) Then 'Evaluamos que los parametros no esten vacios
-            strConexion = "server=" & ConfigurationManager.AppSettings.Item("ServidorSQL").ToString & ";uid=" & strUsuario & ";pwd=" & strContrasenia & ";database=" & ConfigurationManager.AppSettings.Item("MySQLBD").ToString & ""
-        Else  'Si esta no esta llena
-            strConexion = "Dsn=DN_MySql;server=" & ConfigurationManager.AppSettings.Item("ServidorSQL").ToString & ";uid=" & ConfigurationManager.AppSettings.Item("User").ToString & ";pwd=" & ConfigurationManager.AppSettings.Item("Pass").ToString & ";database=" & ConfigurationManager.AppSettings.Item("MySQLBD").ToString & ""
+            End Try
+            'txtLoginUsuario.Attributes.Add("onkeydown", "if (event.keyCode==13 || event.which==13 ) event.keyCode=9;")
         End If
     End Sub
 
-
-
-
-
-    'Metodo para cargar datos a lista desplegable
-    Public Sub BuscarDatosDeLogin()
-
-        'Para guardar los datos en formato TablaDeDatosEnMemoria para mandarlos a la tabla
-        Dim dtTabla As DataTable
-
-        Dim con As New MySqlConnection("server={DESKTOP-P5VS7LV}; uid=root; pwd=toor; database=NotasEstudiantes;")
-
-
-        Dim strSQL As String = ("SELECT usuario, password FROM Usuarios where usuario = '" & CajaUsuario.Text & "';") 'Consulta a la base de datos
-
-
-        Dim comando As New MySqlCommand(strSQL, con)
-
-        Try
-
-
-            Dim ObjetoDataReader As MySqlDataReader
-            con.Open()
-            ObjetoDataReader = comando.ExecuteReader
-
-            If ObjetoDataReader.Read() Then
-                Me.CajaPrueba.Text = ObjetoDataReader.Item("usuario").ToString
-            Else
-                MessageBox.Show("Nose ha encontrado ningun resulado")
+    Public Function ValidarCampos()
+        Dim ban As Boolean
+        ban = False
+        If (Me.CajaUsuario.Text.Trim <> "") Then
+            If (Me.CajaPassword.Text.Trim <> "") Then
+                ban = True
             End If
-            ObjetoDataReader.Close()
-            con.Close()
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-
+        End If
+        Return (ban)
+    End Function
+    Public Sub LimpiarCampos()
+        Me.CajaUsuario.Text = ""
+        Me.CajaPassword.Text = ""
+        StrSQL.Clear()
     End Sub
 
+    Private Function FnValidarLogin() As Boolean
+        Dim ValResult As Boolean = False
+        Dim StrResultado As String = ""
+        Dim dtPermisos As New DataTable()
+
+        StrSQL.Append("SELECT Usuario.Cod_User,Usuario.Cod_User, Usuario.User_Name, Usuario.Password, Role.Nom_Role  ")
+        ' StrSQL.Append("CASE WHEN Usuario.Cod_User=Usuario.Cod_User THEN Cod_User ELSE Cod_User END edgar ")
+        StrSQL.Append("FROM Usuario inner join Role on Usuario.Cod_Role=Role.Cod_Role ")
+        StrSQL.Append("WHERE Usuario.User_Name= '" + Me.CajaUsuario.Text.Trim + "' and Usuario.Password = '" + Me.CajaPassword.Text.Trim + "' ")
+        StrResultado = ClsConexion.FillDataTable(dtPermisos, StrSQL.ToString)
+
+
+        If dtPermisos.Rows.Count > 0 Then
+            'variables de sesion con el login y password del usuario
+            Session("User_Name") = UCase(Me.CajaUsuario.Text.Trim)
+            Session("pass_usuario") = UCase(Me.CajaPassword.Text.Trim)
+            Session("cod_usuario") = dtPermisos.Rows(0).Item("Cod_User").ToString()
+            Session("rol") = dtPermisos.Rows(0).Item("Nom_Role").ToString()
+
+            ValResult = True
+        Else
+            ValResult = False
+        End If
+
+        Return ValResult
+    End Function
 
 
 
+    Protected Sub BotonIniciarSesion_Click(sender As Object, e As EventArgs) Handles BotonIniciarSesion.Click
 
-    'Metodo para cargar datos a lista desplegable
-    Public Sub CargarCatalogos()
-        Dim strSQL As New StringBuilder 'variable string donde se gaurdara la consulta
-        strSQL.Append("SELECT usuario FROM Usuarios where IDUsuario=1;") 'Consulta a la base de datos
-
-        'Llamamos al objeto de la clase conexion y llamamos al metodo especializado en listas desplegables
-        ' Le mandamos el objeto desplegable y el string de la consulta
-        Me.ClaseDeConexionMYSQL.FillObjectList(Me.CajaPrueba, strSQL.ToString) 'el ID del desplegable es pro
-
-        strSQL.Clear()  'Limpiamos el stirng de consulta
-    End Sub
-
-
-
-    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        CargarCatalogos()
+        If ValidarCampos() Then 'Validamos todos los campos
+            If FnValidarLogin() Then
+                Response.Redirect(URLDireccionamientoCorrecto)
+                'ObjClient.MostrarMensaje("Login Exitoso!!!", Me)
+            Else ObjClient.MostrarMensaje("Usuario o Password Incorrecto!!!.  Vuelva a intentarlo.", Me)
+            End If
+        Else ObjClient.MostrarMensaje("Ingrese los campos Usuario y Password son obligatorios, debe de llenarlos.", Me)
+        End If
     End Sub
 End Class

@@ -1,4 +1,5 @@
 ﻿Imports System.Data.Odbc
+Imports System.Data.SqlClient
 Public Class ClsConexionMySQL
     'Variable para guardar el String de conexion
     'Dimencion, NOmbre de varible, como, String
@@ -109,6 +110,37 @@ Public Class ClsConexionMySQL
     End Function
 
 
+
+
+
+
+
+    'NUEVBO METODO PARA EL LOGIN
+    Public Function FillDataTable(ByRef myDataTable As Object, ByVal SQLString As String) As String
+        ' Retorna los registros que cumplen con una condicion en una tabla
+        AsignarConexion()
+        Dim msgRet As String = ""
+
+        Dim sqlcConexion As New OdbcConnection(strConexion)
+        'Dim sqlcDataAdapter As New SqlDataAdapter(SQLString, sqlcConexion)
+        Dim sqlcDataAdapter As New OdbcDataAdapter(SQLString, sqlcConexion)
+        Dim dsDatos As New Data.DataSet
+        Dim dtTabla As Data.DataTable
+        Try
+            sqlcDataAdapter.Fill(dsDatos, "TablaDDL")
+            dtTabla = dsDatos.Tables("TablaDDL")
+            sqlcDataAdapter.Dispose()
+            myDataTable = dtTabla
+        Catch ex As System.Exception
+            msgRet = "Ocurrió el siguiente error! " & vbCrLf & ex.Message
+        Finally
+            sqlcConexion.Close()
+            sqlcConexion.Dispose()
+            sqlcDataAdapter.Dispose()
+            dsDatos.Dispose()
+        End Try
+        Return msgRet
+    End Function
 
 
 

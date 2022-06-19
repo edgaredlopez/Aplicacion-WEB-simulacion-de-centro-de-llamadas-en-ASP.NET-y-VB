@@ -4,31 +4,36 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <link href="EstilosLogin.css" rel="stylesheet" type="text/css" />
     <title>Login </title>
 
-    <style type="text/css">
-        .auto-style1 {
-            height: 27px;
-        }
-    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:Label ID="LabelUsuario" runat="server" Text="Usuario:"></asp:Label>
-            <asp:TextBox ID="CajaUsuario" runat="server" Height="19px"></asp:TextBox>
-             <asp:TextBox ID="CajaPrueba" runat="server" Height="19px"></asp:TextBox>
+        <div ID="ContenedorPadre">
+
+            <asp:Label ID="TituloLogin" Class="TituloLogin" runat="server" Text="Bienvenido a la página, inicie sesión con sus credenciales para ver sus datos:"></asp:Label>
+            <div id="ContenedorHijo">
+                  <br /> <br />
+                <asp:Label ID="LabelUsuario" CssClass="LabelLogin" runat="server" Text="Usuario:"></asp:Label>
+                <asp:TextBox ID="CajaUsuario" Class="CajasInput" runat="server" ></asp:TextBox>
+           
 
 
-             <br /> <br />
+                <br /> <br />
 
-            <asp:Label ID="LabelContrasena" runat="server" Text="Contraseña:"></asp:Label>
-            <input id="CajaPassword" type="password" class="auto-style1" />
+                <asp:Label ID="LabelContrasena" Class="LabelLogin" runat="server" Text="Contraseña:"></asp:Label>
+               
+                <asp:TextBox ID="CajaPassword"  Class="CajasInput" runat="server" ></asp:TextBox>
 
-             <br />
-             <br />
-             <asp:HyperLink ID="BotonIniciarSesion" runat="server" CssClass="ClaseBotonIniciarSesion" NavigateUrl="~/Modulos/Inicio.aspx">INICIO</asp:HyperLink>
-            <asp:Button ID="Button1" runat="server" Text="Button" />
+                <br />
+                <br />
+               
+                <asp:Button ID="BotonIniciarSesion" runat="server" Text="Iniciar sesion" />
+
+            </div>
+           
         </div>
     </form>
 </body>

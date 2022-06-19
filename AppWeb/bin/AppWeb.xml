@@ -59,6 +59,78 @@ AppWeb
  </summary>
  <returns>Nombre Página (String)</returns>
 </member>
+<member name="F:AppWeb.FormularioReporte._CajaMesajeHeaderReporte">
+<summary>
+Control CajaMesajeHeaderReporte.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:AppWeb.FormularioReporte._EtiquetaBuscar">
+<summary>
+Control EtiquetaBuscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:AppWeb.FormularioReporte._CajaFiltroReporte">
+<summary>
+Control CajaFiltroReporte.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:AppWeb.FormularioReporte._Label1">
+<summary>
+Control Label1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:AppWeb.FormularioReporte._fechainicial">
+<summary>
+Control fechainicial.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:AppWeb.FormularioReporte._fechafinal">
+<summary>
+Control fechafinal.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:AppWeb.FormularioReporte._BUSCARFILTRO">
+<summary>
+Control BUSCARFILTRO.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:AppWeb.FormularioReporte._TablaReportes">
+<summary>
+Control TablaReportes.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:AppWeb.Formulario._Label3">
 <summary>
 Control Label3.
@@ -68,63 +140,63 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.Formulario._Id">
+<member name="F:AppWeb.Formulario._NumTicket">
 <summary>
-Control Id.
+Control NumTicket.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.Formulario._Nombre">
+<member name="F:AppWeb.Formulario._TituloTicket">
 <summary>
-Control Nombre.
+Control TituloTicket.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.Formulario._aniocursado">
+<member name="F:AppWeb.Formulario._DescripcionTicket">
 <summary>
-Control aniocursado.
+Control DescripcionTicket.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.Formulario._Grado">
+<member name="F:AppWeb.Formulario._Prioridad">
 <summary>
-Control Grado.
+Control Prioridad.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.Formulario._Seccion">
+<member name="F:AppWeb.Formulario._InterlocutorDesplegable">
 <summary>
-Control Seccion.
+Control InterlocutorDesplegable.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.Formulario._ClaseDesplegable">
+<member name="F:AppWeb.Formulario._TipoDesplegable">
 <summary>
-Control ClaseDesplegable.
+Control TipoDesplegable.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.Formulario._Calificacion">
+<member name="F:AppWeb.Formulario._AreaDesplegable">
 <summary>
-Control Calificacion.
+Control AreaDesplegable.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -176,6 +248,33 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:AppWeb.Inicio._Label2">
+<summary>
+Control Label2.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:AppWeb.Inicio._Label3">
+<summary>
+Control Label3.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:AppWeb.Inicio._pruebasesion">
+<summary>
+Control pruebasesion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:AppWeb.Inicio._Image1">
 <summary>
 Control Image1.
@@ -188,6 +287,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:AppWeb.WebForm1._form1">
 <summary>
 Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:AppWeb.WebForm1._TituloLogin">
+<summary>
+Control TituloLogin.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -212,15 +320,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.WebForm1._CajaPrueba">
-<summary>
-Control CajaPrueba.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:AppWeb.WebForm1._LabelContrasena">
 <summary>
 Control LabelContrasena.
@@ -230,18 +329,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.WebForm1._BotonIniciarSesion">
+<member name="F:AppWeb.WebForm1._CajaPassword">
 <summary>
-Control BotonIniciarSesion.
+Control CajaPassword.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.WebForm1._Button1">
+<member name="F:AppWeb.WebForm1._BotonIniciarSesion">
 <summary>
-Control Button1.
+Control BotonIniciarSesion.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -275,18 +374,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.Plantilla._HyperLink2">
+<member name="F:AppWeb.Plantilla._ModuloAnalista">
 <summary>
-Control HyperLink2.
+Control ModuloAnalista.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:AppWeb.Plantilla._HyperLink3">
+<member name="F:AppWeb.Plantilla._ModuloInterlocutor">
 <summary>
-Control HyperLink3.
+Control ModuloInterlocutor.
 </summary>
 <remarks>
 Campo generado automáticamente.

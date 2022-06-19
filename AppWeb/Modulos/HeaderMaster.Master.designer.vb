@@ -41,22 +41,22 @@ Partial Public Class Plantilla
     Protected WithEvents HyperLink1 As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''Control HyperLink2.
+    '''Control ModuloAnalista.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents HyperLink2 As Global.System.Web.UI.WebControls.HyperLink
+    Protected WithEvents ModuloAnalista As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
-    '''Control HyperLink3.
+    '''Control ModuloInterlocutor.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents HyperLink3 As Global.System.Web.UI.WebControls.HyperLink
+    Protected WithEvents ModuloInterlocutor As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
     '''Control ContentPlaceHolder1.

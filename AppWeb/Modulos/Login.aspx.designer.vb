@@ -23,6 +23,15 @@ Partial Public Class WebForm1
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control TituloLogin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TituloLogin As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control LabelUsuario.
     '''</summary>
     '''<remarks>
@@ -41,15 +50,6 @@ Partial Public Class WebForm1
     Protected WithEvents CajaUsuario As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control CajaPrueba.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents CajaPrueba As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''Control LabelContrasena.
     '''</summary>
     '''<remarks>
@@ -59,20 +59,20 @@ Partial Public Class WebForm1
     Protected WithEvents LabelContrasena As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control CajaPassword.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents CajaPassword As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Control BotonIniciarSesion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents BotonIniciarSesion As Global.System.Web.UI.WebControls.HyperLink
-
-    '''<summary>
-    '''Control Button1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents BotonIniciarSesion As Global.System.Web.UI.WebControls.Button
 End Class

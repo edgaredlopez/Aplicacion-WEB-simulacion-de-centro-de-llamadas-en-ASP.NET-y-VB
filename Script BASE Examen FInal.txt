@@ -1,0 +1,76 @@
+CREATE DATABASE test_upana;
+
+USE test_upana;
+
+
+CREATE TABLE Role
+(
+	Cod_Role int not null primary key auto_increment,
+    Nom_Role varchar(50)
+);
+
+Create Table Usuario
+(
+	Cod_User varchar(50) not null primary key,
+    User_Name varchar(50),
+    Password varchar(25),
+    Nom_Usuario varchar (50),
+    Ape_Usuario varchar (50),
+    Correo varchar (50),
+    
+    Cod_Role int not null,
+    Foreign key (Cod_Role) references role(Cod_Role)
+);
+
+
+CREATE TABLE Area
+(
+	Cod_Area int not null primary key auto_increment,
+    Nom_Area varchar(50)
+);
+
+CREATE TABLE Tipo_Ticket
+(
+	Cod_Tipo int not null primary key auto_increment,
+    Nom_Tipo varchar(50)
+);
+
+
+CREATE TABLE Ticket
+(
+	Num_Ticket int not null primary key auto_increment,
+    Titulo_Ticket varchar(100),
+    Desc_Ticket varchar(200),
+    Prioridad varchar(50),
+    User_Creacion varchar(50),
+    Fecha_Creacion date,
+    
+    Cod_User varchar(50),
+    Cod_Tipo int,
+    Cod_Area int,
+    
+    Foreign key (Cod_User) references Usuario(Cod_User),
+    Foreign key (Cod_Tipo) references Tipo_Ticket(Cod_Tipo),
+    Foreign key (Cod_Area) references Area(Cod_Area)
+    
+);
+
+Insert into Role (Nom_Role) values ("Analista");
+Insert into Role (Nom_Role) values ("Interlocutor");
+
+
+Insert into Area (Nom_Area) values ("Contabilidad");
+Insert into Area (Nom_Area) values ("Informatica");
+Insert into Area (Nom_Area) values ("Finanzas");
+Insert into Area (Nom_Area) values ("Mercadeo");
+Insert into Area (Nom_Area) values ("Contabilidad");
+
+Insert into Tipo_Ticket (Nom_Tipo) values ("Requerimiento");
+Insert into Tipo_Ticket (Nom_Tipo) values ("Soporte");
+Insert into Tipo_Ticket (Nom_Tipo) values ("Incidente");
+Insert into Tipo_Ticket (Nom_Tipo) values ("Error");
+
+select * from Role;
+Select * from area;
+Select * from Tipo_Ticket;
+select * from usuario

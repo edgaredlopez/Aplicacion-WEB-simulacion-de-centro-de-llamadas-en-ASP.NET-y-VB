@@ -1,4 +1,4 @@
-# Aplicacion WEB simulacion de centro de llamadas en ASPX.NET y VB
+# Aplicacion WEB simulacion de centro de llamadas en ASP.NET y VB
 Esta es una aplicación WEB que simula la aplicación de un centro de llamadas que  lleva el control tickets de reportes. Este cuenta con dos roles los cuales son: analista y interlocutor a los cuales se les habilitan opciones y modulos distintos con ciertos privilegios. Este proyecto esta desarrollado en ASPX .NET con el lenguaje de VISUAL BASIC, con conexión a una base de datos MYSQL 
 
 LOGIN
